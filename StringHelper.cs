@@ -6,11 +6,13 @@ namespace PadawansTask4
     {
         private static bool IsVowel(char a)
         {
-            return a == 'a' || a == 'e' || a == 'i' || a == '0' || a == 'u';
+            return a == 'a' || a == 'e' || a == 'i' || a == 'o' || a == 'u';
         }
         public static int GetVowelCount(string str)
         {
             if (str == null)
+                throw new ArgumentNullException();
+            if (str.Length == 0)
                 throw new ArgumentException();
 
             int counter = 0;
